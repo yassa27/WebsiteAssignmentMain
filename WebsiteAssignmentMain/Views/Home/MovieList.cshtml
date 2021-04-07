@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Movie List";
+    ViewData["PageHeading"] = "Movie List";
+}
+
+
+<section class="wrap">
+    @foreach (var item in Model)
+    {
+    <div>
+        <h3>@item.Movie_Name</h3>
+        <p><a asp-controller="Home" asp-action="MovieInfo" asp-route-id="@item.Movie_Id">Details</a></p>
+    </div>
+    }
+</section>

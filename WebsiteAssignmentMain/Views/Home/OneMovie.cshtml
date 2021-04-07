@@ -1,0 +1,14 @@
+﻿@model WebsiteAssignmentMain.Models.Movie
+@{
+
+    ViewData["Title"] = Model.Movie_Name;
+    ViewData["MetaScore"] = Model.Movie_MetaScore;
+    ViewData["Votes"] = Model.Movie_Votes;
+
+}
+<h1>Films Details</h1>
+
+<p>@Model.Movie_Name
+   @Model.Movie_MetaScore  
+   @Model.Movie_Votes
+    </p>

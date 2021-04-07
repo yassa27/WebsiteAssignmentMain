@@ -1,0 +1,25 @@
+﻿@model WebsiteAssignmentMain.Models.Movie
+
+@{
+    ViewData["Title"] = @Model.Movie_Name;
+    ViewData["PageHeading"] = @Model.Movie_Name;
+}
+
+
+<section>
+
+    <div class="filmInfo">
+        <h2>@Model.Movie_Name</h2>
+        <p>Release: @Model.Movie_Year</p>
+        <p>Genre: @Model.Movie_Genre</p>
+        <p>Total Run Time (in minutes): @Model.Movie_Time</p>
+        <p>Imdb Rating: @Model.Movie_Imdb</p>
+        <p>Total Votes: @Model.Movie_Votes</p>
+        <p>Gross Domestic income in millions: £@((Model.Movie_Gross))</p>
+        @*metascore*@
+    </div>
+
+</section>
+
+
+
