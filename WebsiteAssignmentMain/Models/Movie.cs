@@ -24,8 +24,8 @@ namespace WebsiteAssignmentMain.Models
 
         public int Movie_Time { get; set; }
 
-        [Column(TypeName = "decimal(18, 2)")]
-        public int Movie_Imdb { get; set; }
+        [Column(TypeName = "decimal(18, 1)")]
+        public decimal Movie_Imdb { get; set; }
 
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Movie_MetaScore { get; set; }

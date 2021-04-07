@@ -20,12 +20,6 @@ namespace WebsiteAssignmentMain.Controllers
             _context = context;
         }
 
-        public IActionResult OneMovie()
-
-        {
-            Movie model = _context.Movies.FirstOrDefault();
-            return View(model);
-        }
         public IActionResult Index()
         {
             return View();
@@ -48,6 +42,10 @@ namespace WebsiteAssignmentMain.Controllers
             Movie model = _context.Movies.Find(id);
             return View(model);
         }
+        public IActionResult MovieControl()
+        {
+            return View();
+        }
         public IActionResult Register()
         {
             return View();
@@ -55,6 +53,29 @@ namespace WebsiteAssignmentMain.Controllers
         public IActionResult Login()
         {
             return View();
+        }
+        public IActionResult Search(String SearchString)
+
+        {
+
+            if (!string.IsNullOrEmpty(SearchString))
+
+            {
+                var movies = from m in _context.Movies
+                            where m.Movie_Name.Contains(SearchString)
+                            select m;
+
+                List<Movie> model = movies.ToList();
+
+                ViewData["SearchString"] = SearchString;
+
+                return View(model);
+
+            }
+            else
+            {
+                return View();
+            }
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

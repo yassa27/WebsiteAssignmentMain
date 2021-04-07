@@ -1,8 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Movie List";
     ViewData["PageHeading"] = "Movie List";
+    ViewData["SearchString"] = "Search Data";
 }
 
+    <section class="noflex">
+        <form asp-action="Search" method="get">
+            <div>
+                <label for="SearchString">Search Movie by Title: </label> <input type="text" name="SearchString" id="SearchString" />
+                <input type="submit" value="Filter" />
+            </div>
+        </form>
+    </section>
 
 <section class="wrap">
     @foreach (var item in Model)
