@@ -1,28 +1,31 @@
 ﻿@model WebsiteAssignmentMain.Models.MovieForm
 @{
-    
+    Layout = "_Layout";
 }
-<h1>Add Film</h1>
+<h1>Add a Movie</h1>
 
-<form asp-controller="Home" asp-action="MovieControl">
+<form asp-controller="MData" asp-action="MovieADD">
     <div>
         <label asp-for="Movie_Name">Movie Name</label>
         <input type="text" asp-for="Movie_Name" />
+        <span asp-validation-for="Movie_Name" class="error"></span>
     </div>
 
     <div>
         <label asp-for="Movie_Year">Movie Release Year</label>
         <input type="text" asp-for="Movie_Year" />
+        <span asp-validation-for="Movie_Year" class="error"></span>
     </div>
 
     <div>
         <label asp-for="Movie_Genre">Movie Genre</label>
         <textarea asp-for="Movie_Genre"></textarea>
+        <span asp-validation-for="Movie_Genre" class="error"></span>
     </div>
 
     <div>
         <label asp-for="Movie_Time">Total Movie Run time</label>
-        <<input type="text" asp-for="Movie_Time" />
+        <input type="text" asp-for="Movie_Time" />
     </div>
 
     <div>

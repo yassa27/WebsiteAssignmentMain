@@ -26,15 +26,37 @@ namespace WebsiteAssignmentMain.Controllers
         }
 
         [HttpGet]
-        public IActionResult AddMovie()
+        public IActionResult MovieADD()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult AddMovie(MovieForm model)
+        public IActionResult MovieADD(MovieForm model)
         {
-            Movie newMovie = new Movie
+            if (ModelState.IsValid)
+            {
+                Movie newMovie = new Movie
+                {
+                    Movie_Name = model.Movie_Name,
+                    Movie_Genre = model.Movie_Genre,
+                    Movie_Year = model.Movie_Year,
+                    Movie_Time = model.Movie_Time,
+                    Movie_Imdb = model.Movie_Imdb,
+                    Movie_Votes = model.Movie_Votes,
+                    Movie_Gross = model.Movie_Gross,
+                };
+                _context.Add(newMovie);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View();
+        }
+        [HttpGet]
+        public IActionResult MovieEDIT(int id)
+        {
+            Movie model = _context.Movies.Find(id);
+            MovieForm formModel = new MovieForm
             {
                 Movie_Name = model.Movie_Name,
                 Movie_Genre = model.Movie_Genre,
@@ -44,11 +66,45 @@ namespace WebsiteAssignmentMain.Controllers
                 Movie_Votes = model.Movie_Votes,
                 Movie_Gross = model.Movie_Gross,
             };
-            _context.Add(newMovie);
-            _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
+            return View(formModel);
+        }
 
-            return View();
+        [HttpPost]
+        public IActionResult MovieEDIT(MovieForm model)
+        {
+            if (ModelState.IsValid)
+            {
+                Movie editMovie = new Movie
+                {
+                    Movie_Name = model.Movie_Name,
+                    Movie_Genre = model.Movie_Genre,
+                    Movie_Year = model.Movie_Year,
+                    Movie_Time = model.Movie_Time,
+                    Movie_Imdb = model.Movie_Imdb,
+                    Movie_Votes = model.Movie_Votes,
+                    Movie_Gross = model.Movie_Gross,
+                };
+                _context.Movies.Update(editMovie);
+
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult MovieDELETE(int Id)
+        {
+            Movie model = _context.Movies.Find(Id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult MovieDELETE(Movie model)
+        {
+            _context.Movies.Remove(model);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

@@ -11,11 +11,11 @@ namespace WebsiteAssignmentMain.Models
     {
         [Key]
         public int Movie_Id { get; set; }
-
+        [Required(ErrorMessage = "The name of the Movie Needs to be Provided")]
         public string Movie_Name { get; set; }
-
+        [Required(ErrorMessage = "The genre of the Movie Needs to be Provided")]
         public string Movie_Genre { get; set; }
-
+        [Required(ErrorMessage = "The genre of the Movie Needs to be Provided")]
         public int Movie_Year { get; set; }
 
         public int Movie_Time { get; set; }

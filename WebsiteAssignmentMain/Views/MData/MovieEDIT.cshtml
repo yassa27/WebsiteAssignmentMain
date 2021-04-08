@@ -1,0 +1,53 @@
+﻿@model WebsiteAssignmentMain.Models.MovieForm
+@{
+    Layout = "_Layout";
+}
+<h1>@Model.Movie_Name</h1>
+
+
+<form asp-controller="MData" asp-action="MovieEDIT">
+    <input type="hidden" name="Movie_Id" value="@Model.Movie_Id" />
+    <div>
+        <label>Movie Name</label>
+        <input asp-for="Movie_Name" />
+        <span asp-validation-for="Movie_Name" class="error"></span>
+    </div>
+
+    <div>
+        <label asp-for="Movie_Year">Movie Release Year</label>
+        <input type="text" asp-for="Movie_Year" />
+        <span asp-validation-for="Movie_Year" class="error"></span>
+    </div>
+
+    <div>
+        <label asp-for="Movie_Genre">Movie Genre</label>
+        <textarea asp-for="Movie_Genre"></textarea>
+        <span asp-validation-for="Movie_Genre" class="error"></span>
+    </div>
+
+    <div>
+        <label asp-for="Movie_Time">Total Movie Run time</label>
+        <input type="text" asp-for="Movie_Time" />
+    </div>
+
+    <div>
+        <label asp-for="Movie_Imdb">Movie Imdb Rating</label>
+        <input type="text" asp-for="Movie_Imdb" />
+    </div>
+
+    <div>
+        <label asp-for="Movie_Votes">Movie total votes</label>
+        <input type="text" asp-for="Movie_Votes" />
+    </div>
+
+    <div>
+        <label asp-for="Movie_Gross">Movie Gross Domestic Income in millions</label>
+        <input type="text" asp-for="Movie_Gross" />
+    </div>
+
+    <div>
+        <input type="submit" value="edit" class="edit" />
+    </div>
+
+</form>
+
