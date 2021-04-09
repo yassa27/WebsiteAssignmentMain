@@ -6,7 +6,7 @@
 
     <section class="noflex">
         <form asp-action="Search" method="get">
-            <div>
+            <div class="center-text">
                 <label for="SearchString">Search Movie by Title: </label> <input type="text" name="SearchString" id="SearchString" />
                 <input type="submit" value="Filter" />
             </div>
@@ -17,8 +17,9 @@
     @foreach (var item in Model)
     {
     <div>
-        <h3>@item.Movie_Name</h3>
-        <p><a asp-controller="Home" asp-action="MovieInfo" asp-route-id="@item.Movie_Id">Details</a></p>
+        <h3 class="center-text">
+            <a asp-controller="Home" asp-action="MovieInfo" asp-route-id="@item.Movie_Id">@item.Movie_Name</a>
+        </h3>
     </div>
     }
 </section>

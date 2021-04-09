@@ -102,6 +102,5 @@ namespace WebsiteAssignmentMain.Controllers
             signinManager.SignOutAsync().Wait();
             return RedirectToAction("SignIn", "Security");
         }
-
     }
 }
