@@ -30,14 +30,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="MData" asp-action="Index">Content Management System</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Register">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Login</a>
-                        </li>
                     </ul>
                 </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="login">
+                        <p>Welcome @User.Identity.Name</p>
+                        <form asp-controller="Security" asp-action="SignOutPage" method="post">
+                            <button type="submit" class="delete">Sign Out</button>
+                        </form>
+                    </div>
+                }
+
             </div>
         </nav>
     </header>

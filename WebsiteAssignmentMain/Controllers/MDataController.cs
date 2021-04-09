@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebsiteAssignmentMain.Models;
+using Microsoft.AspNetCore.Identity;
+
 
 namespace WebsiteAssignmentMain.Controllers
 {
+    [Authorize(Roles = "Manager")]
     public class MDataController : Controller
     {
         private readonly ILogger<MDataController> _logger;
