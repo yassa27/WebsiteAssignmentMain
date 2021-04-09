@@ -1,6 +1,6 @@
 ﻿@model WebsiteAssignmentMain.Models.Movie
 @{
-    Layout = "_Layout";
+    Layout = "_CMS";
     ViewData["Title"] = "Delete movie";
 }
 
@@ -12,7 +12,9 @@
 
         <p><input type="submit" value="Delete" class="delete" /></p>
 
-        <p><a asp-controller="MData" asp-action="Index" class="add">Keep</a><br></p>
+        <p><a asp-controller="MData" asp-action="Index" class="add">
+        <input type="button" class="btn btn-primary" value="Keep Movie" />
+        </a><br></p>
 
     </form>
 

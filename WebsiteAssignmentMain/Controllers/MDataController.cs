@@ -24,33 +24,28 @@ namespace WebsiteAssignmentMain.Controllers
             List<Movie> model = _context.Movies.ToList();
             return View(model);
         }
-
         [HttpGet]
         public IActionResult MovieADD()
         {
             return View();
         }
-
         [HttpPost]
         public IActionResult MovieADD(MovieForm model)
         {
-            if (ModelState.IsValid)
+
+            Movie addedMovie = new Movie
             {
-                Movie newMovie = new Movie
-                {
-                    Movie_Name = model.Movie_Name,
-                    Movie_Genre = model.Movie_Genre,
-                    Movie_Year = model.Movie_Year,
-                    Movie_Time = model.Movie_Time,
-                    Movie_Imdb = model.Movie_Imdb,
-                    Movie_Votes = model.Movie_Votes,
-                    Movie_Gross = model.Movie_Gross,
-                };
-                _context.Add(newMovie);
-                _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
-            }
-            return View();
+                Movie_Name = model.Movie_Name,
+                Movie_Genre = model.Movie_Genre,
+                Movie_Year = model.Movie_Year,
+                Movie_Time = model.Movie_Time,
+                Movie_Imdb = model.Movie_Imdb,
+                Movie_Votes = model.Movie_Votes,
+                Movie_Gross = model.Movie_Gross,
+            };
+            _context.Add(addedMovie);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
         [HttpGet]
         public IActionResult MovieEDIT(int id)
@@ -58,6 +53,7 @@ namespace WebsiteAssignmentMain.Controllers
             Movie model = _context.Movies.Find(id);
             MovieForm formModel = new MovieForm
             {
+                Movie_Id = model.Movie_Id,
                 Movie_Name = model.Movie_Name,
                 Movie_Genre = model.Movie_Genre,
                 Movie_Year = model.Movie_Year,
@@ -68,14 +64,14 @@ namespace WebsiteAssignmentMain.Controllers
             };
             return View(formModel);
         }
-
         [HttpPost]
         public IActionResult MovieEDIT(MovieForm model)
         {
             if (ModelState.IsValid)
             {
-                Movie editMovie = new Movie
+                Movie editedMovie = new Movie
                 {
+                    Movie_Id = model.Movie_Id,
                     Movie_Name = model.Movie_Name,
                     Movie_Genre = model.Movie_Genre,
                     Movie_Year = model.Movie_Year,
@@ -84,8 +80,7 @@ namespace WebsiteAssignmentMain.Controllers
                     Movie_Votes = model.Movie_Votes,
                     Movie_Gross = model.Movie_Gross,
                 };
-                _context.Movies.Update(editMovie);
-
+                _context.Movies.Update(editedMovie);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
