@@ -2,27 +2,31 @@
 @{
     Layout = "_CMS";
 }
-<h2 class="fullWidth">Sign In</h2>
+<h2 class="fullWidth center-text">Sign In to use Content Management System</h2>
 <section>
     <form asp-controller="Security" asp-action="SignIn" method="post">
-        <div>
-            <label asp-for="UserName"></label>
-            <input type="text" asp-for="UserName" />
+        <div class="box">
+            <div class="content">
+                <div>
+                    <label asp-for="UserName">Username</label>
+                    <input class="field" input type="text" asp-for="UserName" placeholder="Please enter your UserName"/>
+                </div>
+                <div>
+                    <label asp-for="Password">Password</label>
+                    <input class="field" input type="password" asp-for="Password" placeholder="Please enter your password"/>
+                </div>
+                <div>
+                    <label asp-for="RememberMe">Remember Me</label>
+                    <input type="checkbox" asp-for="RememberMe" />
+                </div>
+                <div>
+                    <button type="submit" input class="btn">Sign In</button>
+                </div>
+            <div asp-validation-summary="All" class="message"></div>
+            <div class="center-text">
+                <h3><a asp-controller="security" asp-action="RegisterPage">Create New User Account</a></h3>
+            </div>
+            </div>
         </div>
-        <div>
-            <label asp-for="Password"></label>
-            <input type="password" asp-for="Password" />
-        </div>
-        <div>
-            <label asp-for="RememberMe"></label>
-            <input type="checkbox" asp-for="RememberMe" />
-        </div>
-        <div>
-            <button type="submit" class="add">Sign In</button>
-        </div>
-        <div asp-validation-summary="All" class="message"></div>
-
-        <h3><a asp-controller="security" asp-action="RegisterPage">Create New User Account</a></h3>
-
     </form>
 </section>
