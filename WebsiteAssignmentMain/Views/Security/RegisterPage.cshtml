@@ -9,27 +9,27 @@
         <div class="content">
             <table>
                 <tr>
-                    <td><label asp-for="UserName"></label></td>
+                    <td><label asp-for="UserName">Username:</label></td>
                     <td><input class="field" input type="text" asp-for="UserName" /></td>
                 </tr>
                 <tr>
-                    <td><label asp-for="Password"></label></td>
+                    <td><label asp-for="Password">Password:</label></td>
                     <td><input class="field" input type="password" asp-for="Password" /></td>
                 </tr>
                 <tr>
-                    <td><label asp-for="ConfirmPassword"></label></td>
+                    <td><label asp-for="ConfirmPassword">Confirm Password:</label></td>
                     <td><input class="field" input type="password" asp-for="ConfirmPassword" /></td>
                 </tr>
                 <tr>
-                    <td><label asp-for="Email"></label></td>
+                    <td><label asp-for="Email">Email Address:</label></td>
                     <td><input class="field" input type="text" asp-for="Email" /></td>
                 </tr>
                 <tr>
-                    <td><label asp-for="FullName"></label></td>
+                    <td><label asp-for="FullName">Full Name:</label></td>
                     <td><input class="field" input type="text" asp-for="FullName" /></td>
                 </tr>
                 <tr>
-                    <td><label asp-for="BirthDate"></label></td>
+                    <td><label asp-for="BirthDate">Birth Date:</label></td>
                     <td><input class="field" input type="date" asp-for="BirthDate" /></td>
                 </tr>
                 <tr>
@@ -39,7 +39,7 @@
                 </tr>
             </table>
             <div asp-validation-summary="All" class="message"></div>
-            <h3><a asp-controller="security" asp-action="SignIn">Go To Sign-In Page</a></h3>
+            <h3><button input class="btn" asp-controller="security" asp-action="SignIn">Go To Sign-In Page</button></h3>
         </div>
         </div>
 </form>

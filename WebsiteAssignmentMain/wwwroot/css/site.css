@@ -1,24 +1,11 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-/* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
@@ -59,11 +46,11 @@ html {
 }
 
 .footer {
-    /*position: absolute;
+  position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px;Vertically center the text there */
+  line-height: 60px;Vertically center the text there 
     }
 
 .center-text{
@@ -76,10 +63,34 @@ html {
     text-align: left;
 }
 body {
+    padding-top: 65px;
+    padding-bottom: 65px;
     background: #161616;
     color: #FFBF00;
-    font-family: 'Ubuntu Mono', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    color: aqua;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #1b6ec2;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.bg-custom {
+    background-image: linear-gradient(#333, #FFBF00);
 }
 
 .box {
@@ -161,13 +172,33 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
-
-    .btn:hover {
+.btn:hover 
+{
         background: #FFBF00;
         color: #333;
-    }
+}
 
-    .btn:active {
+.btn:active 
+{
         background: #FACC2E;
         color: #333;
-    }
+}
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 65px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #161616; /* Set a background color */
+    color: #FFBF00; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+        background-color: #555; /* Add a dark-grey background on hover */
+}
