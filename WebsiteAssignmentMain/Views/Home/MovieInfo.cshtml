@@ -6,19 +6,24 @@
 }
 
 
-<section class="center-text">
-    <div class="filmInfo">
-        <h2>@Model.Movie_Name</h2>
-        <p>Release: @Model.Movie_Year</p>
-        <p>Genre: @Model.Movie_Genre</p>
-        <p>Total Run Time: @Model.Movie_Time minutes</p>
-        <p>Imdb Rating: @Model.Movie_Imdb</p>
-        <p>Total Votes: @Model.Movie_Votes</p>
-        <p>Gross Domestic income: £@((Model.Movie_Gross)) million</p>
-        @*metascore*@
-    </div>
+    <section class="center-text">
+        <div class="filmInfo">
+            <h2>@Model.Movie_Name</h2>
+            <p>Release: @Model.Movie_Year</p>
+            <p>Genre: @Model.Movie_Genre</p>
+            <p>Total Run Time: @Model.Movie_Time minutes</p>
+            <p>Imdb Rating: @Model.Movie_Imdb</p>
+            <p>Total Votes: @Model.Movie_Votes</p>
+            <p>Gross Domestic income: £@((Model.Movie_Gross)) million</p>
+            @*metascore*@
+        </div>
+        <button onclick="goBack()" id="btn-back" title="Go to top">Return to Previous Page</button>
+    </section>
 
-</section>
-
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 
 

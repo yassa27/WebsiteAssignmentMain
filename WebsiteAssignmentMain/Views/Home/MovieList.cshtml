@@ -8,18 +8,19 @@
         <form asp-action="Search" method="get">
             <div class="center-text">
                 <label for="SearchString">Search Movie by Title: </label> <input type="text" name="SearchString" id="SearchString" />
-                <input type="submit" value="Filter" />
+                <input type="submit" value="Search"/>
             </div>
         </form>
     </section>
 
-<section class="wrap">
-    @foreach (var item in Model)
-    {
-    <div>
-        <h3 class="center-text">
-            <a asp-controller="Home" asp-action="MovieInfo" asp-route-id="@item.Movie_Id">@item.Movie_Name</a>
-        </h3>
-    </div>
-    }
-</section>
+    <section class="wrap">
+        @foreach (var item in Model)
+        {
+            <div>
+                <h3 class="center-text">
+                    <a asp-controller="Home" asp-action="MovieInfo" asp-route-id="@item.Movie_Id" class="btn">@item.Movie_Name</a>
+                </h3>
+            </div>
+        }
+    </section>
+

@@ -50,9 +50,7 @@ namespace WebsiteAssignmentMain.Controllers
         public IActionResult Search(String SearchString)
 
         {
-
             if (!string.IsNullOrEmpty(SearchString))
-
             {
                 var movies = from m in _context.Movies
                             where m.Movie_Name.Contains(SearchString)
@@ -70,6 +68,8 @@ namespace WebsiteAssignmentMain.Controllers
                 return View();
             }
         }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

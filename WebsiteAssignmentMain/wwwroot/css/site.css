@@ -202,3 +202,20 @@ a.navbar-brand {
 #myBtn:hover {
         background-color: #555; /* Add a dark-grey background on hover */
 }
+
+#btn-back {
+    z-index: 99; /* Make sure it does not overlap */
+    outline: none; /* Remove outline */
+    background-color: #161616; /* Set a background color */
+    color: #FFBF00; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#btn-back:hover 
+{
+        background-color: #555; /* Add a dark-grey background on hover */
+}
+
