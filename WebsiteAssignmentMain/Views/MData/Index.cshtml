@@ -1,21 +1,21 @@
 ﻿
 @{ Layout = "_CMS"; }
 
-<p><a asp-controller="MData" asp-action="MovieADD" class="add">Add a Movie</a></p>
+<p><a asp-controller="MData" asp-action="MovieADD" class="btn">Add a Movie</a></p>
+    <table class="table">
+        <tr class="center-text">
+            <td class="mainText">Movie Title</td>
+            <td class="mainText">Edit</td>
+            <td class="mainText">Delete</td>
+        </tr>
 
-<table class="table">
-    <tr>
-        <td>Movie Title</td>
-        <td>Edit</td>
-        <td>Delete</td>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><a asp-controller="Home" asp-action="MovieInfo" asp-route-id="@item.Movie_Id" class="btn">@item.Movie_Name</a></td>
+                <td><p><a asp-controller="MData" asp-action="MovieEDIT" asp-route-id="@item.Movie_Id" class="btn">Edit Details</a></p></td>
+                <td><p><a asp-controller="MData" asp-action="MovieDELETE" asp-route-id="@item.Movie_Id" class="btn">Delete</a></p></td>
+            </tr>
+}
 
-    @foreach (var item in Model)
-    {
-<tr>
-    <td><a asp-controller="Home" asp-action="MovieInfo" asp-route-id="@item.Movie_Id">@item.Movie_Name</a></td>
-    <td><p><a asp-controller="MData" asp-action="MovieEDIT" asp-route-id="@item.Movie_Id" class="edit">Edit Details</a></p></td>
-    <td><p><a asp-controller="MData" asp-action="MovieDELETE" asp-route-id="@item.Movie_Id" class="delete">Delete</a></p></td>
-</tr>}
-
-</table>
+    </table>

@@ -31,8 +31,16 @@ namespace WebsiteAssignmentMain
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDbContext<UserIdentityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<UserIdentity, UserIdentityRole>()
-                .AddEntityFrameworkStores<UserIdentityContext>();
+            services.AddIdentity<UserIdentity, UserIdentityRole>(options=>
+            {//password requirements
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 8;
+                options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.";
+            })
+             .AddEntityFrameworkStores<UserIdentityContext>();
             services.ConfigureApplicationCookie(opt =>
             {
                 opt.LoginPath = "/Security/SignIn";

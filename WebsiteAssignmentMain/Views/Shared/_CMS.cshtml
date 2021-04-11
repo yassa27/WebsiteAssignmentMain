@@ -37,7 +37,7 @@
                     <div class="login">
                         <p>Welcome @User.Identity.Name</p>
                         <form asp-controller="Security" asp-action="SignOutPage" method="post">
-                            <button type="submit" class="delete">Sign Out</button>
+                                <button type="submit" class="signOutbtn">Sign Out</button>
                         </form>
                     </div>
                 }
@@ -49,7 +49,7 @@
                 @RenderBody()
             </main>
         </div>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button>
+        <button onclick="topFunction()" id="TopBtn" title="Go to top">Back to Top</button>
         <footer class="border-top footer text-muted">
             <div class="container">
                 &copy; 2021 - Movies4You - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -61,7 +61,7 @@
         @RenderSection("Scripts", required: false)
 
         <script>
-            mybutton = document.getElementById("myBtn");
+            mybutton = document.getElementById("TopBtn");
 
             // When the user scrolls down 20px from the top of the document, show the button
             window.onscroll = function () { scrollFunction() };
