@@ -8,24 +8,24 @@ namespace WebsiteAssignmentMain.Models
 {
     public class Register
     {
-        [Required]
+        [Required(ErrorMessage ="*")]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string Password { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "*")]
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "*")]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "*")]
         public string FullName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "*")]
         public DateTime BirthDate { get; set; }
     }
 }

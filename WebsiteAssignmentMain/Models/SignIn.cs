@@ -8,12 +8,11 @@ namespace WebsiteAssignmentMain.Models
 {
     public class SignIn
     {
-        [Required]
+        [Required(ErrorMessage = " ")]
         public string UserName { get; set; }
-        [Required]
+        [Required(ErrorMessage = " ")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-        [Required]
         public bool RememberMe { get; set; }
     }
 }

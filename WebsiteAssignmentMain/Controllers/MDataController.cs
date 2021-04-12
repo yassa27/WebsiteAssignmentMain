@@ -36,20 +36,23 @@ namespace WebsiteAssignmentMain.Controllers
         [HttpPost]
         public IActionResult MovieADD(MovieForm model)
         {
-
-            Movie addedMovie = new Movie
+            if (ModelState.IsValid)
             {
-                Movie_Name = model.Movie_Name,
-                Movie_Genre = model.Movie_Genre,
-                Movie_Year = model.Movie_Year,
-                Movie_Time = model.Movie_Time,
-                Movie_Imdb = model.Movie_Imdb,
-                Movie_Votes = model.Movie_Votes,
-                Movie_Gross = model.Movie_Gross,
-            };
-            _context.Add(addedMovie);
-            _context.SaveChanges();
-            return RedirectToAction(nameof(Index));
+                Movie addedMovie = new Movie
+                {
+                    Movie_Name = model.Movie_Name,
+                    Movie_Year = (int)model.Movie_Year,
+                    Movie_Genre = model.Movie_Genre,
+                    Movie_Time = model.Movie_Time,
+                    Movie_Imdb = model.Movie_Imdb,
+                    Movie_Votes = model.Movie_Votes,
+                    Movie_Gross = model.Movie_Gross,
+                };
+                _context.Add(addedMovie);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(model);
         }
         [HttpGet]
         public IActionResult MovieEDIT(int id)
@@ -59,8 +62,8 @@ namespace WebsiteAssignmentMain.Controllers
             {
                 Movie_Id = model.Movie_Id,
                 Movie_Name = model.Movie_Name,
-                Movie_Genre = model.Movie_Genre,
                 Movie_Year = model.Movie_Year,
+                Movie_Genre = model.Movie_Genre,
                 Movie_Time = model.Movie_Time,
                 Movie_Imdb = model.Movie_Imdb,
                 Movie_Votes = model.Movie_Votes,
@@ -77,8 +80,8 @@ namespace WebsiteAssignmentMain.Controllers
                 {
                     Movie_Id = model.Movie_Id,
                     Movie_Name = model.Movie_Name,
+                    Movie_Year = (int)model.Movie_Year,
                     Movie_Genre = model.Movie_Genre,
-                    Movie_Year = model.Movie_Year,
                     Movie_Time = model.Movie_Time,
                     Movie_Imdb = model.Movie_Imdb,
                     Movie_Votes = model.Movie_Votes,

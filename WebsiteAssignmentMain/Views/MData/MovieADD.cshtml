@@ -2,45 +2,46 @@
 @{
     Layout = "_CMS";
 }
-        <h1>Add a Movie</h1>
+        <h1 class="center-text">Add a Movie</h1>
         <form asp-controller="MData" asp-action="MovieADD">
             <div class="verticalAlign">
                 <div>
                     <label asp-for="Movie_Name">Movie Name</label><br />
-                    <input type="text" asp-for="Movie_Name" />
+                    <input class="searchField" type="text" asp-for="Movie_Name" />
+                    <span class="required">*</span>
                     <span asp-validation-for="Movie_Name" class="error"></span>
                 </div>
 
                 <div>
                     <label asp-for="Movie_Year">Movie Release Year</label><br />
-                    <input type="text" asp-for="Movie_Year" />
+                    <input class="searchField" type="text" asp-for="Movie_Year" />
+                    <span class="required">*</span>
                     <span asp-validation-for="Movie_Year" class="error"></span>
                 </div>
 
                 <div>
                     <label asp-for="Movie_Genre">Movie Genre</label><br />
-                    <textarea asp-for="Movie_Genre"></textarea>
-                    <span asp-validation-for="Movie_Genre" class="error"></span>
+                    <input class="searchField" asp-for="Movie_Genre"/>
                 </div>
 
                 <div>
                     <label asp-for="Movie_Time">Total Movie Run time</label><br />
-                    <input type="text" asp-for="Movie_Time"  placeholder="IN MINUTES"/>
+                    <input class="searchField" type="text" asp-for="Movie_Time"  placeholder="IN MINUTES"/>
                 </div>
 
                 <div>
                     <label asp-for="Movie_Imdb">Movie Imdb Rating</label><br />
-                    <input type="text" asp-for="Movie_Imdb" />
+                    <input class="searchField" type="text" asp-for="Movie_Imdb" />
                 </div>
 
                 <div>
                     <label asp-for="Movie_Votes">Movie total votes: </label><br />
-                    <input type="text" asp-for="Movie_Votes" />
+                    <input class="searchField" type="text" asp-for="Movie_Votes" />
                 </div>
 
                 <div>
                     <label asp-for="Movie_Gross">Movie Gross Domestic Income in millions: </label><br />
-                    <input type="text" asp-for="Movie_Gross" placeholder="IN MILLIONS £" />
+                    <input class="searchField" type="text" asp-for="Movie_Gross" placeholder="IN MILLIONS £" />
                 </div>
             </div>
             <div>

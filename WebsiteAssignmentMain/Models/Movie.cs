@@ -17,10 +17,10 @@ namespace WebsiteAssignmentMain.Models
         public string Movie_Name { get; set; }
 
         [Required]
+        public int Movie_Year { get; set; }
+
         [Column(TypeName = "varchar(100)")]
         public string Movie_Genre { get; set; }
-
-        public int Movie_Year { get; set; }
 
         public int Movie_Time { get; set; }
 

@@ -9,11 +9,13 @@
             <div class="content">
                 <div>
                     <label asp-for="UserName">Username</label>
-                    <input class="field" input type="text" asp-for="UserName" placeholder="PLEASE ENTER YOUR USERNAME"/>
+                    <input class="field" input type="text" asp-for="UserName" placeholder="PLEASE ENTER YOUR USERNAME" />
+                    <span asp-validation-for="UserName" class="error"></span>
                 </div>
                 <div>
                     <label asp-for="Password">Password</label>
-                    <input class="field" input type="password" asp-for="Password" placeholder="PLEASE ENTER YOUR PASSWORD"/>
+                    <input class="field" input type="password" asp-for="Password" placeholder="PLEASE ENTER YOUR PASSWORD" />
+                    <span asp-validation-for="Password" class="error"></span>
                 </div>
                 <div>
                     <label asp-for="RememberMe">Remember Me</label>
@@ -22,7 +24,6 @@
                 <div>
                     <button type="submit" input class="btn">Sign In</button>
                 </div>
-            <div asp-validation-summary="All" class="message"></div>
             <div class="center-text">
                 <h3><button input class="btn"asp-controller="security" asp-action="RegisterPage">Create New User Account</button></h3>
             </div>

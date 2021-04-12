@@ -3,8 +3,8 @@
 <section class="noflex">
     <form asp-action="Search" method="get">
         <div class="center-text">
-            <label for="SearchString">Search Movie by Title: </label> <input type="text" name="SearchString" id="SearchString" />
-            <input type="submit" value="Search" />
+            <label for="SearchString">Search Movie by Title: </label> <input class="searchField" type="text" name="SearchString" id="SearchString" />
+            <input type="submit" value="Search" class="searchbtn"/>
         </div>
     </form>
 </section>
@@ -19,7 +19,7 @@
             </h3>}
         if (Model.Count == 0)
         {
-            <p>Sorry no matches.</p>
+            <p class="center-text">Sorry no matches.</p>
         }
     }
 </div>
