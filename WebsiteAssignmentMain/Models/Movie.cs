@@ -12,8 +12,8 @@ namespace WebsiteAssignmentMain.Models
         [Key]
         public int Movie_Id { get; set; }
 
-        [Required]
         [Column(TypeName = "varchar(100)")]
+        [Required]
         public string Movie_Name { get; set; }
 
         [Required]

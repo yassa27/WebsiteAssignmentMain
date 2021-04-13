@@ -23,9 +23,6 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="MovieList">Movies</a>
                         </li>
                         <li class="nav-item">
@@ -36,7 +33,7 @@
                 @if (User.Identity.IsAuthenticated)
                 {
                     <div class="login">
-                        <p>Welcome @User.Identity.Name</p>
+                        <p id="accountWelcome">Welcome @User.Identity.Name</p>
                         <form asp-controller="Security" asp-action="SignOutPage" method="post">
                             <button type="submit" class="signOutbtn">Sign Out</button>
                         </form>
@@ -52,9 +49,7 @@
     </div>
     <button onclick="topFunction()" id="TopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - Movies4You - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+        <div class="container"> &copy; 2021 - Movies4You</div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

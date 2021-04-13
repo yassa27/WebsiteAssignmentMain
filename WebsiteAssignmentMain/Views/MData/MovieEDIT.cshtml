@@ -10,14 +10,12 @@
         <div>
             <label>Movie Name</label> <br />
             <input class="searchField" asp-for="Movie_Name" />
-            <span class="required">*</span>
             <span asp-validation-for="Movie_Name" class="error"></span>
         </div>
 
         <div>
             <label asp-for="Movie_Year">Movie Release Year</label><br />
             <input class="searchField" type="text" asp-for="Movie_Year" />
-            <span class="required">*</span>
             <span asp-validation-for="Movie_Year" class="error"></span>
         </div>
 

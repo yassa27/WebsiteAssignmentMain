@@ -12,10 +12,10 @@ namespace WebsiteAssignmentMain.Models
         [Key]
         public int Movie_Id { get; set; }
 
-        [Required(ErrorMessage =" ")]
+        [Required(ErrorMessage = "*")] 
         public string Movie_Name { get; set; }
 
-        [Required(ErrorMessage = " ")]
+        [Required(ErrorMessage = "*")] 
         public int? Movie_Year { get; set; }
 
         public string Movie_Genre { get; set; }

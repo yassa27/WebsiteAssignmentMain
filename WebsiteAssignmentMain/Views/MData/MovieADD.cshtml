@@ -6,27 +6,25 @@
         <form asp-controller="MData" asp-action="MovieADD">
             <div class="verticalAlign">
                 <div>
-                    <label asp-for="Movie_Name">Movie Name</label><br />
-                    <input class="searchField" type="text" asp-for="Movie_Name" />
-                    <span class="required">*</span>
+                    <label>Movie Name</label> <br />
+                    <input class="searchField" asp-for="Movie_Name" />
                     <span asp-validation-for="Movie_Name" class="error"></span>
                 </div>
 
                 <div>
                     <label asp-for="Movie_Year">Movie Release Year</label><br />
                     <input class="searchField" type="text" asp-for="Movie_Year" />
-                    <span class="required">*</span>
                     <span asp-validation-for="Movie_Year" class="error"></span>
                 </div>
 
                 <div>
                     <label asp-for="Movie_Genre">Movie Genre</label><br />
-                    <input class="searchField" asp-for="Movie_Genre"/>
+                    <input class="searchField" asp-for="Movie_Genre" />
                 </div>
 
                 <div>
                     <label asp-for="Movie_Time">Total Movie Run time</label><br />
-                    <input class="searchField" type="text" asp-for="Movie_Time"  placeholder="IN MINUTES"/>
+                    <input class="searchField" type="text" asp-for="Movie_Time" placeholder="IN MINUTES" />
                 </div>
 
                 <div>
@@ -47,5 +45,4 @@
             <div>
                 <input type="submit" value="Add" class="btn" />
             </div>
-
         </form>
