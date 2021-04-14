@@ -8,10 +8,10 @@ namespace WebsiteAssignmentMain.Models
 {
     public class SignIn
     {
-        [Required(ErrorMessage = " ")]
+        [Required(ErrorMessage = "Invalid Username")]
         public string UserName { get; set; }
 
-        [Required(ErrorMessage = " ")]
+        [Required(ErrorMessage = "Invalid Password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 

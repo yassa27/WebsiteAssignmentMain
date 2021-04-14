@@ -2,47 +2,56 @@
 @{
     Layout = "_CMS";
 }
-        <h1 class="center-text">Add a Movie</h1>
-        <form asp-controller="MData" asp-action="MovieADD">
-            <div class="verticalAlign">
-                <div>
-                    <label>Movie Name</label> <br />
-                    <input class="searchField" asp-for="Movie_Name" />
-                    <span asp-validation-for="Movie_Name" class="error"></span>
-                </div>
-
-                <div>
-                    <label asp-for="Movie_Year">Movie Release Year</label><br />
-                    <input class="searchField" type="text" asp-for="Movie_Year" />
-                    <span asp-validation-for="Movie_Year" class="error"></span>
-                </div>
-
-                <div>
-                    <label asp-for="Movie_Genre">Movie Genre</label><br />
-                    <input class="searchField" asp-for="Movie_Genre" />
-                </div>
-
-                <div>
-                    <label asp-for="Movie_Time">Total Movie Run time</label><br />
-                    <input class="searchField" type="text" asp-for="Movie_Time" placeholder="IN MINUTES" />
-                </div>
-
-                <div>
-                    <label asp-for="Movie_Imdb">Movie Imdb Rating</label><br />
-                    <input class="searchField" type="text" asp-for="Movie_Imdb" />
-                </div>
-
-                <div>
-                    <label asp-for="Movie_Votes">Movie total votes: </label><br />
-                    <input class="searchField" type="text" asp-for="Movie_Votes" />
-                </div>
-
-                <div>
-                    <label asp-for="Movie_Gross">Movie Gross Domestic Income in millions: </label><br />
-                    <input class="searchField" type="text" asp-for="Movie_Gross" placeholder="IN MILLIONS £" />
-                </div>
-            </div>
+<div class="boxInfo">
+    <div class="content">
+    <h1 class="center-text">Add a Movie</h1>
+    <form asp-controller="MData" asp-action="MovieADD">
+        <div class="verticalAlign">
             <div>
-                <input type="submit" value="Add" class="btn" />
+                <label>Movie Name</label> <br />
+                <input class="searchField" asp-for="Movie_Name" />
+                <span asp-validation-for="Movie_Name" class="error"></span>
             </div>
-        </form>
+
+            <div>
+                <label asp-for="Movie_Year">Movie Release Year</label><br />
+                <input class="searchField" type="text" asp-for="Movie_Year" />
+                <span asp-validation-for="Movie_Year" class="error"></span>
+            </div>
+
+            <div>
+                <label asp-for="Movie_Genre">Movie Genre</label><br />
+                <input class="searchField" asp-for="Movie_Genre" />
+                <span asp-validation-for="Movie_Genre" class="error"></span>
+            </div>
+
+            <div>
+                <label asp-for="Movie_Time">Total Movie Run time</label><br />
+                <input class="searchField" type="text" asp-for="Movie_Time" placeholder="IN MINUTES" />
+                <span asp-validation-for="Movie_Time" class="error"></span>
+            </div>
+
+            <div>
+                <label asp-for="Movie_Imdb">Movie Imdb Rating</label><br />
+                <input class="searchField" type="text" asp-for="Movie_Imdb" />
+                <span asp-validation-for="Movie_Imdb" class="error"></span>
+            </div>
+
+            <div>
+                <label asp-for="Movie_Votes">Movie total votes: </label><br />
+                <input class="searchField" type="text" asp-for="Movie_Votes" />
+                <span asp-validation-for="Movie_Votes" class="error"></span>
+            </div>
+
+            <div>
+                <label asp-for="Movie_Gross">Movie Gross Domestic Income in millions: </label><br />
+                <input class="searchField" type="text" asp-for="Movie_Gross" placeholder="IN MILLIONS £" />
+                <span asp-validation-for="Movie_Gross" class="error"></span>
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Add" class="btn" />
+        </div>
+    </form>
+</div>
+</div>

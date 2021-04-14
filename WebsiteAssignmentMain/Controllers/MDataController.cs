@@ -43,10 +43,10 @@ namespace WebsiteAssignmentMain.Controllers
                     Movie_Name = model.Movie_Name,
                     Movie_Year = (int)model.Movie_Year,
                     Movie_Genre = model.Movie_Genre,
-                    Movie_Time = model.Movie_Time,
-                    Movie_Imdb = model.Movie_Imdb,
-                    Movie_Votes = model.Movie_Votes,
-                    Movie_Gross = model.Movie_Gross,
+                    Movie_Time = (int)model.Movie_Time,
+                    Movie_Imdb = (decimal)model.Movie_Imdb,
+                    Movie_Votes = (int)model.Movie_Votes,
+                    Movie_Gross = (decimal)model.Movie_Gross,
                 };
                 _context.Add(addedMovie);
                 _context.SaveChanges();
@@ -82,10 +82,10 @@ namespace WebsiteAssignmentMain.Controllers
                     Movie_Name = model.Movie_Name,
                     Movie_Year = (int)model.Movie_Year,
                     Movie_Genre = model.Movie_Genre,
-                    Movie_Time = model.Movie_Time,
-                    Movie_Imdb = model.Movie_Imdb,
-                    Movie_Votes = model.Movie_Votes,
-                    Movie_Gross = model.Movie_Gross,
+                    Movie_Time = (int)model.Movie_Time,
+                    Movie_Imdb = (decimal)model.Movie_Imdb,
+                    Movie_Votes = (int)model.Movie_Votes,
+                    Movie_Gross = (decimal)model.Movie_Gross,
                 };
                 _context.Movies.Update(editedMovie);
                 _context.SaveChanges();

@@ -18,16 +18,19 @@ namespace WebsiteAssignmentMain.Models
         [Required(ErrorMessage = "*")] 
         public int? Movie_Year { get; set; }
 
+        [Required(ErrorMessage = "*")]
         public string Movie_Genre { get; set; }
 
-        public int Movie_Time { get; set; }
+        [Required(ErrorMessage = "*")]
+        public int? Movie_Time { get; set; }
 
-        public decimal Movie_Imdb { get; set; }
+        [Required(ErrorMessage = "*")]
+        public decimal? Movie_Imdb { get; set; }
 
         /*public decimal Movie_MetaScore { get; set; }*/
-
-        public int Movie_Votes { get; set; }
-
-        public decimal Movie_Gross { get; set; }
+        [Required(ErrorMessage = "*")]
+        public int? Movie_Votes { get; set; }
+        [Required(ErrorMessage = "*")]
+        public decimal? Movie_Gross { get; set; }
     }
 }

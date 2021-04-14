@@ -1,5 +1,5 @@
 ﻿
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Poppins'); /*main font for website*/
 
 
 a {
@@ -39,14 +39,13 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
 }
 
-.footer {
+.footer 
+{
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -63,7 +62,8 @@ html {
 .left-text{
     text-align: left;
 }
-.navbar {
+.navbar
+{
     background: #080808;
     color: #fff;
     padding: 15px;
@@ -77,7 +77,16 @@ html {
     left: 0;
 }
 
-body {
+/*mobile friendly grow navbar*/
+.flex-grow-1 
+{
+    background: #FFBF00;
+    flex-grow: 1 !important;
+    border-radius: 7px;
+}
+
+body 
+{
     padding-top: 90px;
     padding-bottom: 65px;
     background: #161616;
@@ -85,6 +94,7 @@ body {
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
 }
+
 .bg-custom {
     background-color: #FFBF00;
 }
@@ -100,14 +110,37 @@ body {
     box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.9);
 }
 
+.boxInfo 
+{
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: #222;
+    border-radius: 7px;
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.9);
+}
+.boxDelete 
+{
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: #222;
+    border-radius: 7px;
+    box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.9);
+}
+
 .content {
     width: 85%;
     height: auto;
-    position:;
     margin: 0 auto;
     padding: 30px 0px;
     text-align: center;
 }
+
 .content h1 
 {
         font-size: 24px;
@@ -118,7 +151,8 @@ body {
 
 }
 
-.field {
+.field 
+{
     width: 100%;
     margin: 10px auto;
     padding: 10px;
@@ -132,7 +166,8 @@ body {
     letter-spacing: 0.125em;
     text-align: center;
 }
-.searchField {
+.searchField 
+{
     width: auto;
     margin: 10px auto;
     padding: 10px;
@@ -147,25 +182,29 @@ body {
 }
 
 
-::-webkit-input-placeholder { /* WebKit browsers */
+::-webkit-input-placeholder 
+{ /* WebKit browsers */
     color: #5A5A5A;
 }
 
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+:-moz-placeholder 
+{ /* Mozilla Firefox 4 to 18 */
     color: #5A5A5A;
 }
 
-::-moz-placeholder { /* Mozilla Firefox 19+ */
+::-moz-placeholder
+{ /* Mozilla Firefox 19+ */
     color: #5A5A5A;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10+ */
+:-ms-input-placeholder 
+{ /* Internet Explorer 10+ */
     color: #5A5A5A;
 }
 
 
-
-.btn {
+.btn 
+{
     width: 100%;
     margin: 10px auto;
     padding: 10px;
@@ -191,7 +230,8 @@ body {
         background: #FACC2E;
         color: #333;
 }
-.searchbtn {
+.searchbtn 
+{
     margin: 10px auto;
     padding: 10px;
     background: #161616;
@@ -205,50 +245,62 @@ body {
     text-transform: uppercase;
 }
 
-    .searchbtn:hover {
-        background: #FFBF00;
-        color: #333;
-    }
-
-    .searchbtn:active {
-        background: #FACC2E;
-        color: #333;
-    }
-
-#TopBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 65px; /* Place the button at the bottom of the page */
-    right: 2px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #161616; /* Set a background color */
-    color: #FFBF00; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 12px; /* Increase font size */
+.searchbtn:hover 
+{
+    background: #FFBF00;
+    color: #333;
 }
 
-#TopBtn:hover {
-        background-color: #555; /* Add a dark-grey background on hover */
+.searchbtn:active 
+{
+    background: #FACC2E;
+    color: #333;
 }
 
-#btn-back {
-    z-index: 99; /* Make sure it does not overlap */
-    outline: none; /* Remove outline */
-    background-color: #161616; /* Set a background color */
-    color: #FFBF00; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
+#TopBtn
+{
+    display: none; /* Hidden by default only shows when user scrolls down*/
+    position: fixed; 
+    bottom: 65px; 
+    right: 2px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: #161616; 
+    color: #FFBF00; 
+    cursor: pointer; 
+    padding: 15px; 
     border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    font-size: 12px; 
+}
+
+#TopBtn:hover 
+{
+        background-color: #555; 
+}
+
+#btn-back 
+{
+    z-index: 99; 
+    outline: none; /* Remove outline */
+    background-color: #161616; 
+    color: #FFBF00; 
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px;
+    border-radius: 10px; 
+    font-size: 18px; 
+    border:none;
 }
 
 #btn-back:hover 
 {
-        background-color: #555; /* Add a dark-grey background on hover */
+        background: #FFBF00;
+        color: #333;
+}
+.btn-back:active 
+{
+    background: #FACC2E;
+    color: #333;
 }
 
 .mainText {
@@ -267,6 +319,7 @@ body {
     color: #161616;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
+    margin-bottom: 0px;
 }
 .signOutbtn {
     margin-top: 5px;
@@ -283,13 +336,38 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
-    .signOutbtn:hover {
-        background: #FFBF00;
-        color: #333;
-    }
 
-    .signOutbtn:active {
-        margin-top: 5px;
-        background: #FACC2E;
-        color: #333;
-    }
+.signOutbtn:hover {
+    background: #FFBF00;
+    color: #333;
+}
+
+.signOutbtn:active {
+    margin-top: 5px;
+    background: #FACC2E;
+    color: #333;
+}
+
+.userinfobtn {
+    margin: 10px auto;
+    padding: 10px;
+    background: #161616;
+    border: none;
+    box-shadow: 0px 1px 0px 0px #111;
+    border-radius: 3px;
+    outline: none;
+    color: #FFBF00;
+    font-weight: 700;
+    letter-spacing: 0.125em;
+    text-transform: uppercase;
+}
+.userinfobtn:hover {
+    background: #FFBF00;
+    color: #333;
+}
+
+.userinfobtn:active {
+    margin-top: 5px;
+    background: #FACC2E;
+    color: #333;
+}

@@ -8,13 +8,15 @@
 
     <input type="hidden" name="Movie_Id" value="@Model.Movie_Id" />
 
-    <p><input type="submit" value="Delete '@Model.Movie_Name'?" class="btn" /></p>
-
-    <p>
-        <a asp-controller="MData" asp-action="Index" class="add">
-            <input type="button" class="btn btn-primary" value="Return to Movies Collection" />
-        </a><br>
-    </p>
-
+    <div class="boxDelete">
+        <div class="center-text">
+            <p><input type="submit" value="Do you want to delete '@Model.Movie_Name'?" class="userinfobtn" /></p>
+            <p>
+                <a asp-controller="MData" asp-action="Index" class="add">
+                    <input type="button" class="userinfobtn" value="Return to Movies Collection" />
+                </a><br>
+            </p>
+        </div>
+    </div>
 </form>
 

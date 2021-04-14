@@ -3,50 +3,59 @@
     Layout = "_CMS";
 }
 
-<div class="verticalAlign">
-    <h1 class="center-text">@Model.Movie_Name</h1>
-    <form asp-controller="MData" asp-action="MovieEDIT">
-        <input type="hidden" name="Movie_Id" value="@Model.Movie_Id" />
-        <div>
-            <label>Movie Name</label> <br />
-            <input class="searchField" asp-for="Movie_Name" />
-            <span asp-validation-for="Movie_Name" class="error"></span>
-        </div>
+    <div class="boxInfo">
+        <div class="content">
+            <div class="verticalAlign">
+                <h1 class="center-text">@Model.Movie_Name</h1>
+                <form asp-controller="MData" asp-action="MovieEDIT">
+                    <input type="hidden" name="Movie_Id" value="@Model.Movie_Id" />
+                    <div>
+                        <label>Movie Name</label> <br />
+                        <input class="searchField" asp-for="Movie_Name" />
+                        <span asp-validation-for="Movie_Name" class="error"></span>
+                    </div>
 
-        <div>
-            <label asp-for="Movie_Year">Movie Release Year</label><br />
-            <input class="searchField" type="text" asp-for="Movie_Year" />
-            <span asp-validation-for="Movie_Year" class="error"></span>
-        </div>
+                    <div>
+                        <label asp-for="Movie_Year">Movie Release Year</label><br />
+                        <input class="searchField" type="text" asp-for="Movie_Year" />
+                        <span asp-validation-for="Movie_Year" class="error"></span>
+                    </div>
 
-        <div>
-            <label asp-for="Movie_Genre">Movie Genre</label><br />
-             <input class="searchField" asp-for="Movie_Genre" />
-        </div>
+                    <div>
+                        <label asp-for="Movie_Genre">Movie Genre</label><br />
+                        <input class="searchField" asp-for="Movie_Genre" />
+                        <span asp-validation-for="Movie_Genre" class="error"></span>
+                    </div>
 
-        <div>
-            <label asp-for="Movie_Time">Total Movie Run time</label><br />
-            <input class="searchField" type="text" asp-for="Movie_Time" />
-        </div>
+                    <div>
+                        <label asp-for="Movie_Time">Total Movie Run time</label><br />
+                        <input class="searchField" type="text" asp-for="Movie_Time" />
+                        <span asp-validation-for="Movie_Time" class="error"></span>
+                    </div>
 
-        <div>
-            <label asp-for="Movie_Imdb">Movie Imdb Rating</label><br />
-            <input class="searchField" type="text" asp-for="Movie_Imdb" />
-        </div>
+                    <div>
+                        <label asp-for="Movie_Imdb">Movie Imdb Rating</label><br />
+                        <input class="searchField" type="text" asp-for="Movie_Imdb" />
+                        <span asp-validation-for="Movie_Imdb" class="error"></span>
+                    </div>
 
-        <div>
-            <label asp-for="Movie_Votes">Movie total votes</label><br />
-            <input class="searchField" type="text" asp-for="Movie_Votes" />
-        </div>
+                    <div>
+                        <label asp-for="Movie_Votes">Movie total votes</label><br />
+                        <input class="searchField" type="text" asp-for="Movie_Votes" />
+                        <span asp-validation-for="Movie_Votes" class="error"></span>
+                    </div>
 
-        <div>
-            <label asp-for="Movie_Gross">Movie Gross Domestic Income in millions</label><br />
-            <input class="searchField" type="text" asp-for="Movie_Gross" />
-        </div>
+                    <div>
+                        <label asp-for="Movie_Gross">Movie Gross Domestic Income in millions</label><br />
+                        <input class="searchField" type="text" asp-for="Movie_Gross" />
+                        <span asp-validation-for="Movie_Gross" class="error"></span>
+                    </div>
 
-        <div>
-            <input type="submit" value="edit" class="btn" />
-        </div>
+                    <div>
+                        <input type="submit" value="edit" class="btn" />
+                    </div>
 
-    </form>
-</div>
+                </form>
+            </div>
+        </div>
+    </div>
