@@ -29,7 +29,9 @@
             </div>
             <div>
                 <label asp-for="BirthDate">Birth Date: </label>
-                <input class="field" input type="date" asp-for="BirthDate" />
+                <div class="datestyle">
+                    <input class="field" input type="date" asp-for="BirthDate" value="2001-01-01">
+                </div>
             </div>
             <button type="submit" input class="btn">Create</button>
             <h3><button input class="btn" asp-controller="security" asp-action="SignIn">Go To Sign-In Page</button></h3>

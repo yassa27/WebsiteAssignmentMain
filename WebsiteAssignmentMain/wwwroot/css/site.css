@@ -1,6 +1,6 @@
 ﻿
 @import url('https://fonts.googleapis.com/css?family=Poppins'); /*main font for website*/
-
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 a {
     color: #0366d6;
@@ -371,3 +371,4 @@ body
     background: #FACC2E;
     color: #333;
 }
+
